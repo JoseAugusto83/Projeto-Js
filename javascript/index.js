@@ -11,13 +11,15 @@ function addTarefa(){
     contador += 1;
 
     console.log(contador)
-
-    if((valorInput !=="")&& (valorInput !== null) && (valorInput !== undefined)){
+ 
+    if((valorInput !=="") && (valorInput !== null) && (valorInput !== undefined)){
         let novoItem = `<div id="${contador}" class="item">
         <div onclick="selecionaTarefa(${contador})" class="item-icone">
             <i id="icone_${contador}" class="mdi mdi-circle-outline"></i>
         </div>
-        <div onclick="selecionaTarefa(${contador})" class="item-nome">${valorInput}</div>
+        <div onclick="selecionaTarefa(${contador})" class="item-nome">
+            <p>${valorInput}</p>
+        </div>
         <div class="item-botao">
             <button onclick="deletaTarefa(${contador})" class="delete">
                 <i class="mdi mdi-delete"></i>
